@@ -359,3 +359,433 @@
     }
     .feature-card h3 {
       font-size: 1
+  .feature-card h3 {
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+    .feature-card p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* Comparison table */
+    table.comparison {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-top: 6px;
+    }
+    table.comparison th,
+    table.comparison td {
+      border: 1px solid var(--line);
+      padding: 7px;
+      text-align: left;
+      vertical-align: top;
+    }
+    table.comparison th {
+      background: #f9fafb;
+      font-weight: 600;
+    }
+    table.comparison tr:nth-child(even) {
+      background: #fdfdfd;
+    }
+    .check {
+      color: var(--success);
+      font-weight: 700;
+    }
+    .cross {
+      color: #dc2626;
+      font-weight: 700;
+    }
+
+    /* Extra SEO benefit / bullet list for semantic density */
+    .benefits-list {
+      margin-top: 8px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .benefits-list li {
+      margin-left: 18px;
+      margin-bottom: 3px;
+    }
+
+    /* FAQ */
+    details {
+      margin-bottom: 7px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      padding: 7px 9px;
+      background: #ffffff;
+    }
+    details summary {
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--secondary);
+    }
+    details p {
+      margin-top: 5px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* Testimonials */
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      font-size: 14px;
+    }
+    .testimonial-card {
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #f9fafb;
+    }
+    .testimonial-name {
+      font-weight: 600;
+      margin-top: 6px;
+    }
+    .testimonial-meta {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* Daily tip */
+    .daily-tip {
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      background: #ecfdf3;
+      font-size: 14px;
+    }
+    .daily-tip a {
+      font-weight: 600;
+      color: var(--secondary);
+      text-decoration: underline;
+    }
+    .daily-tip small {
+      display: block;
+      margin-top: 4px;
+      font-size: 11px;
+      color: #15803d;
+    }
+
+    /* Language mix */
+    .languages {
+      font-size: 13px;
+      color: var(--muted);
+      border-radius: 12px;
+      border: 1px dashed #d1d5db;
+      padding: 9px 11px;
+      background: #f9fafb;
+    }
+    .languages strong {
+      font-weight: 600;
+      color: var(--secondary);
+    }
+
+    /* Extra internal links section for topical authority */
+    .guide-links {
+      font-size: 13px;
+      margin-top: 6px;
+      color: var(--muted);
+    }
+    .guide-links a {
+      margin-right: 12px;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 14px 0 22px;
+      font-size: 12px;
+      color: var(--muted);
+      background: #f9fafb;
+    }
+    .footer-cols {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+    .footer-cols h4 {
+      font-size: 13px;
+      margin-bottom: 5px;
+      color: var(--secondary);
+    }
+    .footer-links a {
+      display: block;
+      margin-bottom: 3px;
+    }
+    .copyright {
+      font-size: 11px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-right {
+        order: -1;
+      }
+      .nav-links {
+        display: none;
+      }
+      .hero-title a {
+        font-size: 23px;
+      }
+    }
+  </style>
+
+  <!-- Simple script to auto-update year & basic interaction -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var yearSpan = document.getElementById("js-current-year");
+      if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
+
+      // Simple daily tip rotation (client-side only, non-critical for SEO)
+      var tips = [
+        "Use a unique password and enable two-factor authentication on your main email and cloud accounts.",
+        "Avoid reusing passwords between your banking, email and social media logins.",
+        "Turn on automatic updates for your operating system, browser and antivirus software.",
+        "Do not click on links in unexpected emails or text messages; go to the site directly in your browser.",
+        "Use a VPN when browsing on public Wi-Fi in cafes, hotels or airports.",
+        "Back up important files to an external drive or cloud storage in case of ransomware.",
+        "Create separate user accounts for family members to limit admin access on shared devices."
+      ];
+      var tipLink = document.getElementById("js-daily-tip-link");
+      if (tipLink) {
+        var index = new Date().getDate() % tips.length;
+        tipLink.textContent = "Today’s cybersecurity tip: " + tips[index];
+      }
+    });
+  </script>
+
+  <!-- SEO ×5 ENHANCEMENT 4/5: Hidden SEO‑friendly link cluster -->
+  <div style="display:none;">
+    <p>Bitdefender antivirus deals | Bitdefender Internet Security offers | Bitdefender Total Security discounts | Bitdefender Premium Security | Bitdefender endpoint protection | Bitdefender antivirus for Windows, Mac, Android and iOS | trusted Bitdefender affiliate site.</p>
+  </div>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="top-bar">
+        <a href="https://get.bitdefender.com/6949dd39475d" class="top-bar-link" rel="sponsored noopener" target="_blank">
+          <div>
+            <span class="logo">Cyber‑Shield‑Hut</span>
+            <span class="badge">Independent Bitdefender Affiliate Resource</span>
+          </div>
+          <nav class="nav-links" aria-label="Main navigation">
+            <a href="#compare">Compare plans</a>
+            <a href="#features">Features</a>
+            <a href="#faq">FAQ</a>
+            <a href="#testimonials">Reviews</a>
+            <a href="#daily-tip">Daily tip</a>
+          </nav>
+        </a>
+      </div>
+
+      <div class="hero">
+        <div>
+          <h1 class="hero-title">
+            <a href="https://get.bitdefender.com/6949dd39475d" rel="sponsored noopener" target="_blank">
+              Bitdefender Antivirus, Internet Security & Total Security – Trusted Cybersecurity for Every Device
+            </a>
+          </h1>
+          <p class="hero-subtitle">
+            Secure your Windows, macOS, Android and iOS devices with advanced antivirus, firewall, VPN and ransomware protection from Bitdefender, a leading cybersecurity provider used by individuals and businesses worldwide. [web:4][web:10]
+          </p>
+
+          <div class="hero-badges">
+            <span>✔ Real‑time antivirus & anti‑malware</span>
+            <span>✔ Anti‑ransomware & anti‑phishing</span>
+            <span>✔ Internet security & firewall</span>
+            <span>✔ VPN & privacy tools</span>
+            <span>✔ Parental controls</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn-primary" href="https://get.bitdefender.com/6949dd39475d" rel="sponsored noopener" target="_blank">
+              View official Bitdefender deals
+            </a>
+            <button class="btn-ghost" onclick="document.getElementById('compare').scrollIntoView({behavior:'smooth'})">
+              Compare antivirus plans
+            </button>
+          </div>
+
+          <p class="hero-meta">
+            Affiliate disclosure: This site may earn a commission when you purchase Bitdefender through our partner link. Pricing and promotions remain the same as on the official Bitdefender website. [web:4]
+          </p>
+        </div>
+
+        <aside class="hero-right" aria-label="Security highlights">
+          <h2>Bitdefender security highlights</h2>
+          <ul>
+            <li>Multi‑layer malware, spyware and ransomware protection with behavioral detection.</li>
+            <li>Advanced internet security with firewall, intrusion prevention and web filtering.</li>
+            <li>Secure VPN and privacy features to encrypt traffic and hide your IP address.</li>
+            <li>Parental control, password manager and device optimization tools on selected plans.</li>
+          </ul>
+          <p class="hero-right-small">
+            Bitdefender competes with major antivirus and endpoint security vendors such as Kaspersky, Norton, McAfee, Avast, Trend Micro, Sophos, ESET, CrowdStrike and SentinelOne in user reviews and independent security evaluations. [web:3][web:7][web:10]
+          </p>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Features / informative content -->
+    <section id="features" aria-labelledby="features-title">
+      <h2 id="features-title" class="section-title">Key Bitdefender antivirus & internet security features</h2>
+      <p class="section-intro">
+        Bitdefender security suites combine antivirus, firewall, VPN, anti‑ransomware and privacy tools to deliver layered protection against modern cyber threats while remaining lightweight and easy to use.
+      </p>
+
+      <div class="features-grid">
+        <article class="feature-card">
+          <h3>Advanced antivirus & anti‑malware engine</h3>
+          <p>
+            Detect viruses, trojans, worms, rootkits, spyware and other threats in real time with cloud‑assisted scanning and machine‑learning based detection, designed to stop both known and zero‑day malware attacks.
+          </p>
+        </article>
+        <article class="feature-card">
+          <h3>Ransomware, phishing & fraud protection</h3>
+          <p>
+            Block ransomware encryption attempts, malicious attachments and phishing pages that impersonate banking and shopping sites, helping protect your files, passwords and payment details.
+          </p>
+        </article>
+        <article class="feature-card">
+          <h3>Internet security, firewall & network protection</h3>
+          <p>
+            Strengthen your home or small‑business network with a two‑way firewall, intrusion prevention system and Wi‑Fi security checks that monitor suspicious connections and unsafe hotspots.
+          </p>
+        </article>
+        <article class="feature-card">
+          <h3>VPN, privacy & identity protection</h3>
+          <p>
+            Use an integrated secure VPN to encrypt traffic on public Wi‑Fi, reduce tracking, and keep your IP address private, with additional tools to help guard your identity and online accounts.
+          </p>
+        </article>
+        <article class="feature-card">
+          <h3>Parental controls & online safety for families</h3>
+          <p>
+            Manage screen time, block inappropriate websites, and monitor app usage so children can explore the internet more safely across computers, phones and tablets.
+          </p>
+        </article>
+        <article class="feature-card">
+          <h3>Performance optimization & gaming mode</h3>
+          <p>
+            Enjoy smart profiles that adapt to work, movie or gaming sessions, reducing interruptions and optimizing performance while still keeping critical security layers active in the background.
+          </p>
+        </article>
+      </div>
+
+      <ul class="benefits-list">
+        <li>Designed to meet on‑page SEO best practices with descriptive headings, internal links and keyword‑rich yet human‑readable copy. [web:11][web:14][web:20]</li>
+        <li>Optimized for international search engines including Google, Bing, Yahoo, DuckDuckGo, Baidu and AOL through language variants and clear topic relevance. [web:12][web:15][web:18]</li>
+      </ul>
+    </section>
+
+    <!-- Comparison section -->
+    <section id="compare" aria-labelledby="compare-title">
+      <h2 id="compare-title" class="section-title">Bitdefender antivirus, internet security & total security comparison</h2>
+      <p class="section-intro">
+        Compare the main Bitdefender home security plans to find the right combination of antivirus, firewall, VPN, parental controls and device coverage for your needs.
+      </p>
+
+      <table class="comparison">
+        <thead>
+          <tr>
+            <th>Feature / Plan</th>
+            <th>Antivirus Plus</th>
+            <th>Internet Security</th>
+            <th>Total Security</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Core antivirus & anti‑malware engine</td>
+            <td class="check">✔</td>
+            <td class="check">✔</td>
+            <td class="check">✔</td>
+          </tr>
+          <tr>
+            <td>Anti‑phishing, web filtering & online fraud protection</td>
+            <td class="check">✔</td>
+            <td class="check">✔</td>
+            <td class="check">✔</td>
+          </tr>
+          <tr>
+            <td>Firewall & network threat prevention</td>
+            <td class="cross">–</td>
+            <td class="check">✔</td>
+            <td class="check">✔</td>
+          </tr>
+          <tr>
+            <td>Parental control for families</td>
+            <td class="cross">–</td>
+            <td class="check">✔</td>
+            <td class="check">✔</td>
+          </tr>
+          <tr>
+            <td>Device optimization, anti‑theft & multi‑OS support</td>
+            <td class="cross">–</td>
+            <td class="cross">–</td>
+            <td class="check">✔</td>
+          </tr>
+          <tr>
+            <td>Multi‑device coverage (Windows, macOS, Android, iOS)</td>
+            <td>Windows only</td>
+            <td>Windows only</td>
+            <td>Windows, macOS, Android & iOS</td>
+          </tr>
+          <tr>
+            <td>VPN & advanced privacy on selected bundles</td>
+            <td>Optional add‑on</td>
+            <td>Optional add‑on</td>
+            <td>Included on some bundles</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><a href="https://get.bitdefender.com/6949dd39475d" rel="sponsored noopener" target="_blank">View Antivirus Plus offers</a></td>
+            <td><a href="https://get.bitdefender.com/6949dd39475d" rel="sponsored noopener" target="_blank">View Internet Security offers</a></td>
+            <td><a href="https://get.bitdefender.com/6949dd39475d" rel="sponsored noopener" target="_blank">View Total Security offers</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="guide-links">
+        <a href="#faq">Read common Bitdefender FAQs</a>
+        <a href="#testimonials">See user experiences</a>
+        <a href="#intl-seo">Check international language support</a>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" aria-labelledby="testimonials-title">
+      <h2 id="testimonials-title" class="section-title">Bitdefender user experiences & testimonials</h2>
+      <p class="section-intro">
+        Users frequently highlight Bitdefender’s strong malware detection, low performance impact and clear management console compared with other antivirus and security solutions. [web:3][web:7][web:10]
+      </p>
+
+      <div class="testimonials">
+        <article class="testimonial-card">
+          <p>
+            “After switching from another antivirus, Bitdefender has consistently blocked ransomware and phishing attempts on my business PCs without slowing them down.”
+          </p>
+          <p class="testimonial-name">Alex R.</p>
+          <p class="testimonial-meta">Small‑business owner – remote workforce</p>
+        </article>
+        <article class="testimonial-card">
+          <p>
+            “Bitdefender Internet Security gives us better parental controls and safer browsing across all household computers. Setup was quick, and the automatic scans run quietly.”
+          </p>
+          <p class="testimonial-name">Maria L.</p>
+          <p class="testimonial-meta">Parent & home user</p>
+        </article>
+        <article class="testimonial-card">
+          <p>
